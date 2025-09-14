@@ -97,71 +97,107 @@ const Home = () => {
   return (
     <div className="pt-20">
       {/* Hero Section */}
-      <section ref={heroRef} className="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-50 to-blue-50 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=%2260%22 height=%2260%22 viewBox=%220 0 60 60%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cg fill=%22none%22 fill-rule=%22evenodd%22%3E%3Cg fill=%22%23195885%22 fill-opacity=%220.05%22%3E%3Cpath d=%22M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
-        
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Contenu textuel */}
-            <div className="text-center lg:text-left animate-fade-in">
-              <h1 className="text-4xl md:text-6xl font-bold font-heading text-gray-900 mb-4">
-                Salut, je suis <span className="text-primary-500">Rénato</span>
-              </h1>
-              
-              <div className="h-16 mb-6">
-                <h2 className="text-xl md:text-2xl text-gray-600 font-medium">
-                  {displayedText}
-                  <span className="animate-pulse">|</span>
-                </h2>
-              </div>
-              
-              <p className="text-lg md:text-xl text-gray-600 mb-8 leading-relaxed">
-                Basé au Bénin, je transforme vos idées en solutions digitales innovantes. 
-                Passionné par la technologie, le design et l'impact positif du numérique.
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
-                <Link
-                  to="/projects"
-                  className="bg-primary-500 text-white px-6 sm:px-8 py-4 rounded-lg font-semibold hover:bg-primary-600 transition-all duration-300 hover:scale-105 hover:shadow-lg flex items-center justify-center space-x-2"
-                >
-                  <span>Voir mes projets</span>
-                  <ArrowRight className="h-5 w-5" />
-                </Link>
-                <Link
-                  to="/contact"
-                  className="border-2 border-primary-500 text-primary-500 px-6 sm:px-8 py-4 rounded-lg font-semibold hover:bg-primary-500 hover:text-white transition-all duration-300 hover:scale-105"
-                >
-                  Discutons de votre projet
-                </Link>
-              </div>
-            </div>
+<section ref={heroRef} className="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-50 to-blue-50 relative overflow-hidden">
+  {/* Arrière-plan SVG */}
+  <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=%2260%22 height=%2260%22 viewBox=%220 0 60 60%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cg fill=%22none%22 fill-rule=%22evenodd%22%3E%3Cg fill=%22%23195885%22 fill-opacity=%220.05%22%3E%3Cpath d=%22M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
 
-            {/* Photo principale */}
-            <div className="flex justify-center lg:justify-end">
-              <div className="relative">
-                <div className="absolute inset-0 bg-primary-500 rounded-2xl transform rotate-6 opacity-20"></div>
-                <div className="absolute inset-0 bg-primary-400 rounded-2xl transform rotate-3 opacity-30"></div>
-                <img 
-                  src="https://i.ibb.co/3mGB2NVh/3c4ace58-6c2d-43ad-a572-765507174b05.jpg" 
-                  alt="Rénato TCHOBO - Créateur de solutions digitales au Bénin"
-                  className="relative w-80 h-96 lg:w-96 lg:h-[500px] rounded-2xl shadow-2xl object-cover animate-bounce-gentle"
-                />
-                <div className="absolute -bottom-4 -right-4 bg-white p-4 rounded-xl shadow-lg animate-slide-up">
-                  <div className="flex items-center space-x-2">
-                    <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-                    <span className="text-sm font-medium text-gray-700">Disponible</span>
-                  </div>
+  <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      {/* Contenu textuel */}
+      <div className="text-center lg:text-left animate-fade-in">
+        <h1 className="text-4xl md:text-6xl font-bold font-heading text-gray-900 mb-4">
+          Salut, je suis <span className="text-primary-500">Rénato</span>
+        </h1>
+        
+        <div className="h-16 mb-6">
+          <h2 className="text-xl md:text-2xl text-gray-600 font-medium">
+            {displayedText}
+            <span className="animate-pulse">|</span>
+          </h2>
+        </div>
+        
+        <p className="text-lg md:text-xl text-gray-600 mb-8 leading-relaxed">
+          Basé au Bénin, je transforme vos idées en solutions digitales innovantes. 
+          Passionné par la technologie, le design et l'impact positif du numérique.
+        </p>
+        
+        <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
+          <Link
+            to="/projects"
+            className="bg-primary-500 text-white px-6 sm:px-8 py-4 rounded-lg font-semibold hover:bg-primary-600 transition-all duration-300 hover:scale-105 hover:shadow-lg flex items-center justify-center space-x-2"
+          >
+            <span>Voir mes projets</span>
+            <ArrowRight className="h-5 w-5" />
+          </Link>
+          <Link
+            to="/contact"
+            className="border-2 border-primary-500 text-primary-500 px-6 sm:px-8 py-4 rounded-lg font-semibold hover:bg-primary-500 hover:text-white transition-all duration-300 hover:scale-105"
+          >
+            Discutons de votre projet
+          </Link>
+        </div>
+      </div>
+
+      {/* Carousel Image + Bloc code */}
+      <div className="flex justify-center lg:justify-end">
+        <div className="relative w-80 h-96 lg:w-96 lg:h-[500px] rounded-2xl shadow-2xl overflow-hidden">
+          {["https://i.ibb.co/3mGB2NVh/3c4ace58-6c2d-43ad-a572-765507174b05.jpg",
+            "/ren4.jpg",
+            "code"].map((slide, index) => {
+              const isActive = index === currentIndexSlide;
+              return (
+                <div
+                  key={index}
+                  className={`absolute w-full h-full transition-opacity duration-700 ${
+                    isActive ? "opacity-100 z-20" : "opacity-0 z-10"
+                  }`}
+                >
+                  {slide === "code" ? (
+                    <div className="w-full h-full flex items-center justify-center bg-gray-900 p-4">
+                      <pre className="text-green-400 font-mono text-sm rounded-lg w-[80%] max-w-md">
+{`import React from "react";
+
+export default function App() {
+  return (
+    <div className="hero">
+      <h1>Bienvenue sur mon site 🚀</h1>
+    </div>
+  );
+}`}
+                      </pre>
+                    </div>
+                  ) : (
+                    <img
+                      src={slide}
+                      alt={`Slide ${index + 1}`}
+                      className="w-full h-full object-cover rounded-2xl"
+                    />
+                  )}
                 </div>
-              </div>
-            </div>
+              );
+            })}
+          {/* Petits boutons de navigation */}
+          <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-3">
+            {["0","1","2"].map((_, idx) => (
+              <button
+                key={idx}
+                onClick={() => setCurrentIndexSlide(idx)}
+                className={`w-3 h-3 rounded-full ${
+                  currentIndexSlide === idx ? "bg-white" : "bg-gray-500"
+                }`}
+              />
+            ))}
           </div>
         </div>
-        
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <ChevronDown className="h-8 w-8 text-primary-500" />
-        </div>
-      </section>
+      </div>
+    </div>
+  </div>
+
+  <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+    <ChevronDown className="h-8 w-8 text-primary-500" />
+  </div>
+</section>
+
 
       {/* Stats Section */}
       <section className="py-16 bg-white">
