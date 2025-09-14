@@ -255,16 +255,87 @@ const About = () => {
         Mes Compétences
       </h2>
       <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-        Un ensemble de compétences techniques et créatives pour couvrir tous vos besoins digitaux
+        Un ensemble de compétences techniques, créatives et stratégiques pour couvrir tous vos besoins digitaux
       </p>
     </div>
 
     <div 
-      className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 transition-all duration-1000 delay-300 ${
+      className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 transition-all duration-1000 delay-300 ${
         skillsVisible ? 'animate-slide-up' : 'opacity-0'
       }`}
     >
-      {skills.map((skill, index) => (
+      {[
+        {
+          category: "Développement Web",
+          icon: Code,
+          color: "bg-blue-500",
+          items: [
+            "HTML", "CSS", "JavaScript", "TypeScript", "React", "Next.js", 
+            "Node.js", "PHP", "Python", "Bootstrap"
+          ]
+        },
+        {
+          category: "CMS & No-Code",
+          icon: Globe,
+          color: "bg-orange-500",
+          items: [
+            "WordPress", "Shopify", "Glide", "Adalo", "Bubble", "Bolt"
+          ]
+        },
+        {
+          category: "Design & UI/UX",
+          icon: Palette,
+          color: "bg-purple-500",
+          items: [
+            "UI/UX Design", "Figma", "Wireframing", "Prototypage", 
+            "Adobe Creative Suite", "Canva"
+          ]
+        },
+        {
+          category: "Marketing Digital",
+          icon: TrendingUp,
+          color: "bg-green-500",
+          items: [
+            "SEO (stratégique & technique)", "Google Analytics", 
+            "Google Ads", "Email Marketing", "Content Strategy", "Social Media"
+          ]
+        },
+        {
+          category: "Gestion & Méthodes",
+          icon: Users,
+          color: "bg-red-500",
+          items: [
+            "Gestion de projets numériques", "Stratégie digitale", 
+            "Notion", "Trello", "Asana", "Scrum", "Kanban"
+          ]
+        },
+        {
+          category: "Outils & Automatisation",
+          icon: Award,
+          color: "bg-yellow-500",
+          items: [
+            "Zapier", "Make", "Git", "Docker", "AWS", "Firebase"
+          ]
+        },
+        {
+          category: "Création de Contenu",
+          icon: Heart,
+          color: "bg-pink-500",
+          items: [
+            "Rédaction", "Création de visuels", "Photographie", 
+            "Montage vidéo", "Branding personnel"
+          ]
+        },
+        {
+          category: "E-commerce",
+          icon: Target,
+          color: "bg-indigo-500",
+          items: [
+            "Création de boutiques", "Optimisation SEO", 
+            "Gestion produits & paiements", "Stratégie de vente"
+          ]
+        }
+      ].map((skill, index) => (
         <div 
           key={index} 
           className="relative group bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
