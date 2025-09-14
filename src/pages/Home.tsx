@@ -116,29 +116,45 @@ const Home = () => {
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Texte */}
-            <div className="text-center lg:text-left animate-fade-in">
-              <h1 className="text-4xl md:text-6xl font-bold font-heading text-gray-900 mb-4">
-                Salut, je suis <span className="text-primary-500">Rénato</span>
-              </h1>
-              <div className="h-16 mb-6">
-                <h2 className="text-xl md:text-2xl text-gray-600 font-medium">
-                  {displayedText}
-                  <span className="animate-pulse">|</span>
-                </h2>
-              </div>
-              <p className="text-lg md:text-xl text-gray-600 mb-8 leading-relaxed">
-                Basé au Bénin, je transforme vos idées en solutions digitales innovantes. Passionné par la technologie, le design et l'impact positif du numérique.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
-                <Link to="/projects" className="bg-primary-500 text-white px-6 sm:px-8 py-4 rounded-lg font-semibold hover:bg-primary-600 transition-all duration-300 hover:scale-105 hover:shadow-lg flex items-center justify-center space-x-2">
-                  <span>Voir mes projets</span><ArrowRight className="h-5 w-5" />
-                </Link>
-                <Link to="/contact" className="border-2 border-primary-500 text-primary-500 px-6 sm:px-8 py-4 rounded-lg font-semibold hover:bg-primary-500 hover:text-white transition-all duration-300 hover:scale-105">
-                  Discutons de votre projet
-                </Link>
-              </div>
-            </div>
+            {/* Texte + boutons avec double contour animé */}
+<div className="relative flex flex-col items-center lg:items-start text-center lg:text-left">
+  <div className="relative p-8 rounded-2xl overflow-hidden">
+    {/* Double contour animé */}
+    <div className="absolute inset-0 border-2 border-primary-500 rounded-2xl pointer-events-none animate-border-slide"></div>
+    <div className="absolute inset-2 border-2 border-primary-300 rounded-2xl pointer-events-none animate-border-slide-reverse"></div>
+
+    {/* Contenu réel */}
+    <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-4 relative z-10">
+      Salut, je suis <span className="text-primary-500">Rénato</span>
+    </h1>
+    <div className="h-16 mb-6 relative z-10">
+      <h2 className="text-xl md:text-2xl text-gray-600 font-medium">
+        {displayedText}
+        <span className="animate-pulse">|</span>
+      </h2>
+    </div>
+    <p className="text-lg md:text-xl text-gray-600 mb-8 leading-relaxed relative z-10">
+      Basé au Bénin, je transforme vos idées en solutions digitales innovantes. 
+      Passionné par la technologie, le design et l'impact positif du numérique.
+    </p>
+    <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8 relative z-10">
+      <Link
+        to="/projects"
+        className="bg-primary-500 text-white px-6 sm:px-8 py-4 rounded-lg font-semibold hover:bg-primary-600 transition-all duration-300 hover:scale-105 hover:shadow-lg flex items-center justify-center space-x-2"
+      >
+        <span>Voir mes projets</span>
+        <ArrowRight className="h-5 w-5" />
+      </Link>
+      <Link
+        to="/contact"
+        className="border-2 border-primary-500 text-primary-500 px-6 sm:px-8 py-4 rounded-lg font-semibold hover:bg-primary-500 hover:text-white transition-all duration-300 hover:scale-105"
+      >
+        Discutons de votre projet
+      </Link>
+    </div>
+  </div>
+</div>
+
 
             {/* Carousel */}
             <div className="flex justify-center lg:justify-end">
