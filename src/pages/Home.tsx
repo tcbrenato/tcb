@@ -72,6 +72,7 @@ const Home = () => {
       color: 'bg-orange-500'
     }
   ];
+const [currentIndexSlide, setCurrentIndexSlide] = useState(0);
 
   const testimonials = [
     {
