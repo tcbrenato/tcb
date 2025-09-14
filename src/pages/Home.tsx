@@ -155,7 +155,7 @@ const Home = () => {
                           </pre>
                         </div>
                       ) : (
-                        <img src={slide} alt={`Slide ${index + 1}`} className="w-full h-full object-cover rounded-2xl" />
+                        <img src={slide} alt={`Slide ${index + 2}`} className="w-full h-full object-cover rounded-2xl" />
                       )}
                     </div>
                   )
