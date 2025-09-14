@@ -13,7 +13,11 @@ const Home = () => {
     "Développeur web polyvalent",
     "Expert en UI/UX Design",
     "Spécialiste SEO & Marketing",
-    "Gestionnaire de projets numériques"
+    "Chef de Projet Digital",
+    "Product Manager / Product Owner",
+    "Growth Hacker / Spécialiste en Acquisition",
+    "Consultant en Transformation Digitale",
+    "Spécialiste en Automatisation Marketing"
   ];
 
   const { elementRef: statsRef, isVisible: statsVisible } = useScrollAnimation();
