@@ -56,7 +56,7 @@ const Home = () => {
     "export default function App() {",
     "  return (",
     "    <div className='hero'>",
-    "      <h1>Bienvenue sur mon site 🚀</h1>",
+    "      <h1>Bienvenue sur mon site, je suis Rénato TCHOBO...🚀</h1>",
     "    </div>",
     "  );",
     "}"
