@@ -176,8 +176,204 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Les autres sections restent identiques : Stats, Services, À propos, Témoignages, CTA */}
-      {/* ... copier le code existant pour stats, services, testimonial, CTA ... */}
+
+      {/* Stats Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div 
+            ref={statsRef}
+            className={`grid grid-cols-2 md:grid-cols-4 gap-8 transition-all duration-1000 ${
+              statsVisible ? 'animate-slide-up' : 'opacity-0'
+            }`}
+          >
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center group">
+                <div className="mb-4 flex justify-center">
+                  <div className="p-4 bg-primary-100 rounded-full group-hover:bg-primary-200 transition-colors duration-300">
+                    <stat.icon className="h-8 w-8 text-primary-500" />
+                  </div>
+                </div>
+                <div className="text-3xl md:text-4xl font-bold font-heading text-primary-500 mb-2">
+                  {stat.number}
+                </div>
+                <div className="text-gray-600 font-medium">
+                  {stat.label}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Services Aperçu */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div 
+            ref={servicesRef}
+            className={`text-center mb-16 transition-all duration-1000 ${
+              servicesVisible ? 'animate-slide-up' : 'opacity-0'
+            }`}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold font-heading text-gray-900 mb-4">
+              Services de Développement Web & Digital
+            </h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Je vous accompagne dans tous vos projets digitaux avec expertise et passion
+            </p>
+          </div>
+
+          <div 
+            className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 transition-all duration-1000 delay-300 ${
+              servicesVisible ? 'animate-slide-up' : 'opacity-0'
+            }`}
+          >
+            {services.map((service, index) => (
+              <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group">
+                <div className={`w-12 h-12 ${service.color} rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                  <service.icon className="h-6 w-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold font-heading text-gray-900 mb-2">
+                  {service.title}
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  {service.description}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center mt-12">
+            <Link
+              to="/services"
+              className="inline-flex items-center space-x-2 bg-primary-500 text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary-600 transition-all duration-300 hover:scale-105"
+            >
+              <span>Voir tous les services</span>
+              <ArrowRight className="h-5 w-5" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Section À propos avec photo */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="text-center lg:text-left">
+              <h2 className="text-3xl md:text-4xl font-bold font-heading text-gray-900 mb-6">
+                Pourquoi choisir mes services ?
+              </h2>
+              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+                Avec plus de 5 années d'expérience dans le développement web et le design, 
+                je combine expertise technique et créativité pour créer des solutions qui font la différence.
+              </p>
+              <ul className="space-y-4 mb-8">
+                <li className="flex items-center space-x-3">
+                  <div className="w-6 h-6 bg-primary-500 rounded-full flex items-center justify-center">
+                    <span className="text-white text-sm">✓</span>
+                  </div>
+                  <span className="text-gray-700">Approche personnalisée pour chaque projet</span>
+                </li>
+                <li className="flex items-center space-x-3">
+                  <div className="w-6 h-6 bg-primary-500 rounded-full flex items-center justify-center">
+                    <span className="text-white text-sm">✓</span>
+                  </div>
+                  <span className="text-gray-700">Technologies modernes et performantes</span>
+                </li>
+                <li className="flex items-center space-x-3">
+                  <div className="w-6 h-6 bg-primary-500 rounded-full flex items-center justify-center">
+                    <span className="text-white text-sm">✓</span>
+                  </div>
+                  <span className="text-gray-700">Support et maintenance continue</span>
+                </li>
+              </ul>
+              <Link
+                to="/about"
+                className="inline-flex items-center space-x-2 bg-primary-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-600 transition-all duration-300"
+              >
+                <span>En savoir plus</span>
+                <ArrowRight className="h-5 w-5" />
+              </Link>
+            </div>
+            <div className="flex justify-center">
+              <div className="relative">
+                <img 
+                  src="/ren4.jpg" 
+                  alt="Rénato TCHOBO en plein travail sur un projet digital"
+                  className="w-full max-w-md rounded-2xl shadow-xl object-cover h-96"
+                />
+                <div className="absolute -top-4 -left-4 w-24 h-24 bg-primary-500 rounded-full opacity-20"></div>
+                <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-primary-300 rounded-full opacity-30"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Témoignages */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div 
+            ref={testimonialRef}
+            className={`text-center mb-16 transition-all duration-1000 ${
+              testimonialVisible ? 'animate-slide-up' : 'opacity-0'
+            }`}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold font-heading text-gray-900 mb-4">
+              Avis & Témoignages Clients
+            </h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              La satisfaction client est au cœur de mes priorités
+            </p>
+          </div>
+
+          <div 
+            className={`grid grid-cols-1 md:grid-cols-3 gap-8 transition-all duration-1000 delay-300 ${
+              testimonialVisible ? 'animate-slide-up' : 'opacity-0'
+            }`}
+          >
+            {testimonials.map((testimonial, index) => (
+              <div key={index} className="bg-white p-8 rounded-xl relative hover:shadow-lg transition-shadow duration-300 text-center lg:text-left">
+                <div className="flex items-center justify-center lg:justify-start mb-4">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
+                  ))}
+                </div>
+                <p className="text-gray-700 mb-6 italic leading-relaxed">
+                  "{testimonial.content}"
+                </p>
+                <div>
+                  <div className="font-semibold font-heading text-gray-900">
+                    {testimonial.name}
+                  </div>
+                  <div className="text-gray-600 text-sm">
+                    {testimonial.role}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-primary-500">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold font-heading text-white mb-4">
+            Prêt à transformer votre idée en réalité ?
+          </h2>
+          <p className="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
+            Discutons de votre projet et créons ensemble une solution digitale qui fera la différence
+          </p>
+          <Link
+            to="/contact"
+            className="inline-flex items-center space-x-2 bg-white text-primary-500 px-6 sm:px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 hover:scale-105"
+          >
+            <span>Commencer maintenant</span>
+            <ArrowRight className="h-5 w-5" />
+          </Link>
+
+        </div>
+      </section>
     </div>
   );
 };
