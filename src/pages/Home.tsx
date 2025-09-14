@@ -72,6 +72,14 @@ const Home = () => {
       color: 'bg-orange-500'
     }
   ];
+
+  useEffect(() => {
+  const slideInterval = setInterval(() => {
+    setCurrentIndexSlide(prev => (prev + 1) % 3); // 3 slides dans notre carousel
+  }, 5000);
+  return () => clearInterval(slideInterval);
+}, []);
+
 const [currentIndexSlide, setCurrentIndexSlide] = useState(0);
 
   const testimonials = [
