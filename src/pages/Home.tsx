@@ -12,7 +12,8 @@ const Home = () => {
     "Créateur de solutions digitales",
     "Développeur web polyvalent", 
     "Expert en UI/UX Design",
-    "Spécialiste SEO & Marketing"
+    "Spécialiste SEO & Marketing",
+    "Gestionnaire de projets numériques"
   ];
 
   const { elementRef: statsRef, isVisible: statsVisible } = useScrollAnimation();
