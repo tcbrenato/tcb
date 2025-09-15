@@ -136,7 +136,6 @@ const About: React.FC = () => {
   );
 };
 
-export default About;
 
 
       {/* Story Section avec photos */}
