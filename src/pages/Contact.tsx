@@ -744,6 +744,38 @@ ${formData.message}`);
                 </div>
               </div>
 
+              {/* Services alternatifs */}
+              <div className="bg-primary-50 rounded-xl p-6">
+                <h3 className="text-xl font-semibold font-heading text-gray-900 mb-4">
+                  Services de formulaire
+                </h3>
+                <div className="space-y-3 text-sm">
+                  <div className="flex items-center justify-between">
+                    <span>Formspree</span>
+                    <span className="text-green-600">✓ Configuré</span>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span>EmailJS</span>
+                    <span className="text-yellow-600">⚠ Backup</span>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span>Web3Forms</span>
+                    <span className="text-yellow-600">⚠ Backup</span>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span>Netlify Forms</span>
+                    <span className="text-yellow-600">⚠ Backup</span>
+                  </div>
+                </div>
+                <p className="text-xs text-gray-600 mt-3">
+                  Plusieurs services de sauvegarde garantissent la réception de vos messages.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* CTA Section */}
       <section className="py-20 bg-primary-500">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
