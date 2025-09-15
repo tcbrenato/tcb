@@ -109,7 +109,7 @@ const About = () => {
                 <div className="relative">
                   <div className="absolute inset-0 bg-primary-500 rounded-2xl transform rotate-6"></div>
                   <img 
-                    src="/ren5.jpg" 
+                    src="https://i.ibb.co/jvLT2zHX/t-l-chargement-4.jpg" 
                     alt="Rénato TCHOBO - Créateur de solutions digitales"
                     className="relative w-full max-w-md mx-auto rounded-2xl shadow-2xl object-cover h-96 lg:h-[500px]"
                   />
