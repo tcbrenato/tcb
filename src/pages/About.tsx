@@ -97,65 +97,82 @@ const About = () => {
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-primary-50 to-blue-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div 
+          <div
             ref={heroRef}
             className={`max-w-6xl mx-auto transition-all duration-1000 ${
               heroVisible ? 'animate-slide-up' : 'opacity-0'
             }`}
           >
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              {/* Photo principale */}
+              {/* Photo principale (avec double contour animé) */}
               <div className="order-2 lg:order-1">
                 <div className="relative">
+                  {/* decorative rotated background kept */}
                   <div className="absolute inset-0 bg-primary-500 rounded-2xl transform rotate-6"></div>
-                  <img 
-                    src="/ren5.jpg" 
-                    alt="Rénato TCHOBO - Créateur de solutions digitales"
-                    className="relative w-full max-w-md mx-auto rounded-2xl shadow-2xl object-cover h-96 lg:h-[500px]"
-                  />
-                  <div className="absolute -bottom-6 -right-6 bg-white p-4 rounded-xl shadow-lg">
-                    <div className="flex items-center space-x-2">
-                      <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-                      <span className="text-sm font-medium text-gray-700">Disponible pour projets</span>
+
+                  {/* animated double border wrapper */}
+                  <div className="relative rounded-2xl overflow-hidden">
+                    <div className="absolute inset-0 rounded-2xl border-2 border-primary-500 pointer-events-none animate-border-slide"></div>
+                    <div className="absolute inset-2 rounded-xl border-2 border-primary-300 pointer-events-none animate-border-slide-reverse"></div>
+
+                    <img
+                      src="/ren5.jpg"
+                      alt="Rénato TCHOBO - Créateur de solutions digitales"
+                      className="relative w-full max-w-md mx-auto rounded-2xl shadow-2xl object-cover h-96 lg:h-[500px]"
+                    />
+
+                    <div className="absolute -bottom-6 -right-6 bg-white p-4 rounded-xl shadow-lg">
+                      <div className="flex items-center space-x-2">
+                        <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                        <span className="text-sm font-medium text-gray-700">Disponible pour projets</span>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
 
-              {/* Contenu textuel */}
+              {/* Contenu textuel (avec double contour animé) */}
               <div className="order-1 lg:order-2 text-center lg:text-left">
-                <h1 className="text-4xl md:text-5xl font-bold font-heading text-gray-900 mb-6">
-                  Salut, je suis <span className="text-primary-500">Rénato</span>
-                </h1>
-                <p className="text-xl text-gray-600 leading-relaxed mb-8">
-                  Créateur de solutions digitales passionné, je transforme les idées en expériences 
-                  numériques exceptionnelles depuis le cœur de l'Afrique de l'Ouest.
-                </p>
-                <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-8 text-gray-600 mb-8">
-                  <div className="flex items-center space-x-2">
-                    <MapPin className="h-5 w-5 text-primary-500" />
-                    <span>Bénin, Afrique</span>
+                <div className="relative inline-block rounded-2xl overflow-hidden px-6 py-8">
+                  <div className="absolute inset-0 rounded-2xl border-2 border-primary-500 pointer-events-none animate-border-slide"></div>
+                  <div className="absolute inset-2 rounded-xl border-2 border-primary-300 pointer-events-none animate-border-slide-reverse"></div>
+
+                  <div className="relative z-10">
+                    <h1 className="text-4xl md:text-5xl font-bold font-heading text-gray-900 mb-6">
+                      Salut, je suis <span className="text-primary-500">Rénato</span>
+                    </h1>
+                    <p className="text-xl text-gray-600 leading-relaxed mb-8">
+                      Créateur de solutions digitales passionné, je transforme les idées en expériences
+                      numériques exceptionnelles depuis le cœur de l'Afrique de l'Ouest.
+                    </p>
+                    <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-8 text-gray-600 mb-8">
+                      <div className="flex items-center space-x-2">
+                        <MapPin className="h-5 w-5 text-primary-500" />
+                        <span>Bénin, Afrique</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <Calendar className="h-5 w-5 text-primary-500" />
+                        <span>5+ années d'expérience</span>
+                      </div>
+                    </div>
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                      <a
+                        href="/projects"
+                        className="bg-primary-500 text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary-600 transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                      >
+                        Voir mes projets
+                      </a>
+                      <a
+                        href="/contact"
+                        className="border-2 border-primary-500 text-primary-500 px-8 py-4 rounded-lg font-semibold hover:bg-primary-500 hover:text-white transition-all duration-300"
+                      >
+                        Discutons ensemble
+                      </a>
+                    </div>
                   </div>
-                  <div className="flex items-center space-x-2">
-                    <Calendar className="h-5 w-5 text-primary-500" />
-                    <span>5+ années d'expérience</span>
-                  </div>
-                </div>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                  <a
-                    href="/projects"
-                    className="bg-primary-500 text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary-600 transition-all duration-300 hover:scale-105 hover:shadow-lg"
-                  >
-                    Voir mes projets
-                  </a>
-                  <a
-                    href="/contact"
-                    className="border-2 border-primary-500 text-primary-500 px-8 py-4 rounded-lg font-semibold hover:bg-primary-500 hover:text-white transition-all duration-300"
-                  >
-                    Discutons ensemble
-                  </a>
                 </div>
               </div>
+
             </div>
           </div>
         </div>
@@ -164,7 +181,7 @@ const About = () => {
       {/* Story Section avec photos */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div 
+          <div
             ref={storyRef}
             className={`max-w-6xl mx-auto transition-all duration-1000 ${
               storyVisible ? 'animate-slide-up' : 'opacity-0'
@@ -173,209 +190,223 @@ const About = () => {
             <h2 className="text-3xl md:text-4xl font-bold font-heading text-gray-900 mb-12 text-center">
               Mon Histoire
             </h2>
-            
+
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
               {/* Photo au travail */}
               <div className="relative group">
-                <img 
-                  src="/ren4.jpg" 
-                  alt="Rénato au travail"
-                  className="w-full h-64 object-cover rounded-xl shadow-lg group-hover:shadow-xl transition-shadow duration-300"
-                />
-                <div className="absolute inset-0 bg-primary-500 bg-opacity-0 group-hover:bg-opacity-10 rounded-xl transition-all duration-300"></div>
-                <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-2 rounded-lg">
-                  <p className="text-sm font-medium text-gray-800">Dans mon élément</p>
+                <div className="relative rounded-xl overflow-hidden">
+                  <div className="absolute inset-0 rounded-xl border-2 border-primary-500 pointer-events-none animate-border-slide"></div>
+                  <div className="absolute inset-2 rounded-lg border-2 border-primary-300 pointer-events-none animate-border-slide-reverse"></div>
+
+                  <img
+                    src="/ren4.jpg"
+                    alt="Rénato au travail"
+                    className="w-full h-64 object-cover rounded-xl shadow-lg group-hover:shadow-xl transition-shadow duration-300"
+                  />
+                  <div className="absolute inset-0 bg-primary-500 bg-opacity-0 group-hover:bg-opacity-10 rounded-xl transition-all duration-300"></div>
+                  <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-2 rounded-lg">
+                    <p className="text-sm font-medium text-gray-800">Dans mon élément</p>
+                  </div>
                 </div>
               </div>
 
               {/* Photo professionnelle */}
               <div className="relative group">
-                <img 
-                  src="/ren5.jpg" 
-                  alt="Rénato professionnel"
-                  className="w-full h-64 object-cover rounded-xl shadow-lg group-hover:shadow-xl transition-shadow duration-300"
-                />
-                <div className="absolute inset-0 bg-primary-500 bg-opacity-0 group-hover:bg-opacity-10 rounded-xl transition-all duration-300"></div>
-                <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-2 rounded-lg">
-                  <p className="text-sm font-medium text-gray-800">Professionnel</p>
+                <div className="relative rounded-xl overflow-hidden">
+                  <div className="absolute inset-0 rounded-xl border-2 border-primary-500 pointer-events-none animate-border-slide"></div>
+                  <div className="absolute inset-2 rounded-lg border-2 border-primary-300 pointer-events-none animate-border-slide-reverse"></div>
+
+                  <img
+                    src="/ren5.jpg"
+                    alt="Rénato professionnel"
+                    className="w-full h-64 object-cover rounded-xl shadow-lg group-hover:shadow-xl transition-shadow duration-300"
+                  />
+                  <div className="absolute inset-0 bg-primary-500 bg-opacity-0 group-hover:bg-opacity-10 rounded-xl transition-all duration-300"></div>
+                  <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-2 rounded-lg">
+                    <p className="text-sm font-medium text-gray-800">Professionnel</p>
+                  </div>
                 </div>
               </div>
 
               {/* Photo décontractée */}
               <div className="relative group">
-                <img 
-                  src="/ren6.jpg" 
-                  alt="Rénato décontracté"
-                  className="w-full h-64 object-cover rounded-xl shadow-lg group-hover:shadow-xl transition-shadow duration-300"
-                />
-                <div className="absolute inset-0 bg-primary-500 bg-opacity-0 group-hover:bg-opacity-10 rounded-xl transition-all duration-300"></div>
-                <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-2 rounded-lg">
-                  <p className="text-sm font-medium text-gray-800">Authenticité</p>
+                <div className="relative rounded-xl overflow-hidden">
+                  <div className="absolute inset-0 rounded-xl border-2 border-primary-500 pointer-events-none animate-border-slide"></div>
+                  <div className="absolute inset-2 rounded-lg border-2 border-primary-300 pointer-events-none animate-border-slide-reverse"></div>
+
+                  <img
+                    src="/ren6.jpg"
+                    alt="Rénato décontracté"
+                    className="w-full h-64 object-cover rounded-xl shadow-lg group-hover:shadow-xl transition-shadow duration-300"
+                  />
+                  <div className="absolute inset-0 bg-primary-500 bg-opacity-0 group-hover:bg-opacity-10 rounded-xl transition-all duration-300"></div>
+                  <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-2 rounded-lg">
+                    <p className="text-sm font-medium text-gray-800">Authenticité</p>
+                  </div>
                 </div>
               </div>
+
             </div>
 
             <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
               <p>
-                Né au Bénin, j'ai toujours été fasciné par la technologie et son pouvoir de transformation. 
-                Mon parcours a commencé par une curiosité pour le code, qui s'est rapidement transformée 
+                Né au Bénin, j'ai toujours été fasciné par la technologie et son pouvoir de transformation.
+                Mon parcours a commencé par une curiosité pour le code, qui s'est rapidement transformée
                 en passion pour la création de solutions digitales qui ont un impact réel.
               </p>
               <p>
-                Ce qui me motive chaque jour, c'est la possibilité de contribuer à la transformation 
-                digitale de l'Afrique. Chaque projet est une opportunité de créer quelque chose d'unique, 
+                Ce qui me motive chaque jour, c'est la possibilité de contribuer à la transformation
+                digitale de l'Afrique. Chaque projet est une opportunité de créer quelque chose d'unique,
                 de résoudre un problème concret et d'aider mes clients à atteindre leurs objectifs.
               </p>
               <p>
-                Au-delà de la technique, je crois profondément en l'importance du design et de l'expérience 
-                utilisateur. Une solution digitale ne doit pas seulement fonctionner, elle doit être 
+                Au-delà de la technique, je crois profondément en l'importance du design et de l'expérience
+                utilisateur. Une solution digitale ne doit seulement pas fonctionner, elle doit être
                 intuitive, belle et créer une connexion émotionnelle avec ses utilisateurs.
               </p>
               <div className="bg-primary-50 p-6 rounded-xl border-l-4 border-primary-500">
                 <p className="text-primary-700 font-semibold text-xl italic">
-                  "Mon objectif est simple : transformer vos idées les plus ambitieuses en réalités 
+                  "Mon objectif est simple : transformer vos idées les plus ambitieuses en réalités
                   digitales qui dépassent vos attentes."
                 </p>
               </div>
             </div>
+
           </div>
         </div>
       </section>
 
       {/* Skills Section */}
-<section className="py-20 bg-gray-50">
-  <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-    <div 
-      ref={skillsRef}
-      className={`text-center mb-16 transition-all duration-1000 ${
-        skillsVisible ? 'animate-slide-up' : 'opacity-0'
-      }`}
-    >
-      <h2 className="text-3xl md:text-4xl font-bold font-heading text-gray-900 mb-4">
-        Mes Compétences
-      </h2>
-      <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-        Un ensemble de compétences techniques, créatives et stratégiques pour couvrir tous vos besoins digitaux
-      </p>
-    </div>
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div
+            ref={skillsRef}
+            className={`text-center mb-16 transition-all duration-1000 ${
+              skillsVisible ? 'animate-slide-up' : 'opacity-0'
+            }`}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold font-heading text-gray-900 mb-4">
+              Mes Compétences
+            </h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Un ensemble de compétences techniques, créatives et stratégiques pour couvrir tous vos besoins digitaux
+            </p>
+          </div>
 
-    <div 
-      className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 transition-all duration-1000 delay-300 ${
-        skillsVisible ? 'animate-slide-up' : 'opacity-0'
-      }`}
-    >
-      {[
-        {
-          category: "Développement Web",
-          icon: Code,
-          color: "bg-blue-500",
-          items: [
-            "HTML", "CSS", "JavaScript", "TypeScript", "React", "Next.js", 
-            "Node.js", "PHP", "Python", "Bootstrap"
-          ]
-        },
-        {
-          category: "CMS & No-Code",
-          icon: Globe,
-          color: "bg-orange-500",
-          items: [
-            "WordPress", "Shopify", "Glide", "Adalo", "Bubble", "Bolt"
-          ]
-        },
-        {
-          category: "Design & UI/UX",
-          icon: Palette,
-          color: "bg-purple-500",
-          items: [
-            "UI/UX Design", "Figma", "Wireframing", "Prototypage", 
-            "Adobe Creative Suite", "Canva"
-          ]
-        },
-        {
-          category: "Marketing Digital",
-          icon: TrendingUp,
-          color: "bg-green-500",
-          items: [
-            "SEO (stratégique & technique)", "Google Analytics", 
-            "Google Ads", "Email Marketing", "Content Strategy", "Social Media"
-          ]
-        },
-        {
-          category: "Gestion & Méthodes",
-          icon: Users,
-          color: "bg-red-500",
-          items: [
-            "Gestion de projets numériques", "Stratégie digitale", 
-            "Notion", "Trello", "Asana", "Scrum", "Kanban"
-          ]
-        },
-        {
-          category: "Outils & Automatisation",
-          icon: Award,
-          color: "bg-yellow-500",
-          items: [
-            "Zapier", "Make", "Git", "Docker", "AWS", "Firebase"
-          ]
-        },
-        {
-          category: "Création de Contenu",
-          icon: Heart,
-          color: "bg-pink-500",
-          items: [
-            "Rédaction", "Création de visuels", "Photographie", 
-            "Montage vidéo", "Branding personnel"
-          ]
-        },
-        {
-          category: "E-commerce",
-          icon: Target,
-          color: "bg-indigo-500",
-          items: [
-            "Création de boutiques", "Optimisation SEO", 
-            "Gestion produits & paiements", "Stratégie de vente"
-          ]
-        }
-      ].map((skill, index) => (
-        <div 
-          key={index} 
-          className="relative group bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
-        >
-          {/* Bordure externe */}
-          <div className="absolute inset-0 rounded-xl border-2 border-gray-200 group-hover:border-primary-400 transition-colors duration-300"></div>
+          <div
+            className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 transition-all duration-1000 delay-300 ${
+              skillsVisible ? 'animate-slide-up' : 'opacity-0'
+            }`}
+          >
+            {[
+              {
+                category: "Développement Web",
+                icon: Code,
+                color: "bg-blue-500",
+                items: [
+                  "HTML", "CSS", "JavaScript", "TypeScript", "React", "Next.js",
+                  "Node.js", "PHP", "Python", "Bootstrap"
+                ]
+              },
+              {
+                category: "CMS & No-Code",
+                icon: Globe,
+                color: "bg-orange-500",
+                items: [
+                  "WordPress", "Shopify", "Glide", "Adalo", "Bubble", "Bolt"
+                ]
+              },
+              {
+                category: "Design & UI/UX",
+                icon: Palette,
+                color: "bg-purple-500",
+                items: [
+                  "UI/UX Design", "Figma", "Wireframing", "Prototypage",
+                  "Adobe Creative Suite", "Canva"
+                ]
+              },
+              {
+                category: "Marketing Digital",
+                icon: TrendingUp,
+                color: "bg-green-500",
+                items: [
+                  "SEO (stratégique & technique)", "Google Analytics",
+                  "Google Ads", "Email Marketing", "Content Strategy", "Social Media"
+                ]
+              },
+              {
+                category: "Gestion & Méthodes",
+                icon: Users,
+                color: "bg-red-500",
+                items: [
+                  "Gestion de projets numériques", "Stratégie digitale",
+                  "Notion", "Trello", "Asana", "Scrum", "Kanban"
+                ]
+              },
+              {
+                category: "Outils & Automatisation",
+                icon: Award,
+                color: "bg-yellow-500",
+                items: [
+                  "Zapier", "Make", "Git", "Docker", "AWS", "Firebase"
+                ]
+              },
+              {
+                category: "Création de Contenu",
+                icon: Heart,
+                color: "bg-pink-500",
+                items: [
+                  "Rédaction", "Création de visuels", "Photographie",
+                  "Montage vidéo", "Branding personnel"
+                ]
+              },
+              {
+                category: "E-commerce",
+                icon: Target,
+                color: "bg-indigo-500",
+                items: [
+                  "Création de boutiques", "Optimisation SEO",
+                  "Gestion produits & paiements", "Stratégie de vente"
+                ]
+              }
+            ].map((skill, index) => (
+              <div
+                key={index}
+                className="relative group bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+              >
+                {/* animated double border for each card */}
+                <div className="absolute inset-0 rounded-xl border-2 border-primary-500 pointer-events-none animate-border-slide"></div>
+                <div className="absolute inset-2 rounded-lg border-2 border-primary-300 pointer-events-none animate-border-slide-reverse"></div>
 
-          {/* Bordure interne */}
-          <div className="absolute inset-1 rounded-lg border border-gray-100 group-hover:border-primary-300 transition-colors duration-300"></div>
-          
-          {/* Contenu */}
-          <div className="relative p-6">
-            <div className={`w-12 h-12 ${skill.color} rounded-lg flex items-center justify-center mb-4`}>
-              <skill.icon className="h-6 w-6 text-white" />
-            </div>
-            <h3 className="text-xl font-semibold font-heading text-gray-900 mb-4">
-              {skill.category}
-            </h3>
-            <div className="flex flex-wrap gap-2">
-              {skill.items.map((item, itemIndex) => (
-                <span 
-                  key={itemIndex} 
-                  className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm"
-                >
-                  {item}
-                </span>
-              ))}
-            </div>
+                {/* Contenu */}
+                <div className="relative p-6">
+                  <div className={`w-12 h-12 ${skill.color} rounded-lg flex items-center justify-center mb-4`}>
+                    <skill.icon className="h-6 w-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold font-heading text-gray-900 mb-4">
+                    {skill.category}
+                  </h3>
+                  <div className="flex flex-wrap gap-2">
+                    {skill.items.map((item, itemIndex) => (
+                      <span
+                        key={itemIndex}
+                        className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm"
+                      >
+                        {item}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
-      ))}
-    </div>
-  </div>
-</section>
-
+      </section>
 
       {/* Values Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div 
+          <div
             ref={valuesRef}
             className={`text-center mb-16 transition-all duration-1000 ${
               valuesVisible ? 'animate-slide-up' : 'opacity-0'
@@ -389,22 +420,26 @@ const About = () => {
             </p>
           </div>
 
-          <div 
+          <div
             className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 transition-all duration-1000 delay-300 ${
               valuesVisible ? 'animate-slide-up' : 'opacity-0'
             }`}
           >
             {values.map((value, index) => (
-              <div key={index} className="text-center group">
-                <div className="mb-6 flex justify-center">
+              <div key={index} className="text-center group relative">
+                {/* animated double border wrapper */}
+                <div className="absolute inset-0 rounded-xl border-2 border-primary-500 pointer-events-none animate-border-slide"></div>
+                <div className="absolute inset-2 rounded-lg border-2 border-primary-300 pointer-events-none animate-border-slide-reverse"></div>
+
+                <div className="mb-6 flex justify-center relative z-10">
                   <div className="p-4 bg-primary-100 rounded-full group-hover:bg-primary-200 transition-colors duration-300 group-hover:scale-110">
                     <value.icon className="h-8 w-8 text-primary-500" />
                   </div>
                 </div>
-                <h3 className="text-xl font-semibold font-heading text-gray-900 mb-4">
+                <h3 className="text-xl font-semibold font-heading text-gray-900 mb-4 relative z-10">
                   {value.title}
                 </h3>
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-gray-600 leading-relaxed relative z-10">
                   {value.description}
                 </p>
               </div>
@@ -416,7 +451,7 @@ const About = () => {
       {/* Timeline Section */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div 
+          <div
             ref={timelineRef}
             className={`text-center mb-16 transition-all duration-1000 ${
               timelineVisible ? 'animate-slide-up' : 'opacity-0'
@@ -430,7 +465,7 @@ const About = () => {
             </p>
           </div>
 
-          <div 
+          <div
             className={`max-w-4xl mx-auto transition-all duration-1000 delay-300 ${
               timelineVisible ? 'animate-slide-up' : 'opacity-0'
             }`}
@@ -440,10 +475,16 @@ const About = () => {
               {timeline.map((item, index) => (
                 <div key={index} className={`relative flex items-center mb-12 ${index % 2 === 0 ? 'justify-start' : 'justify-end'}`}>
                   <div className={`w-full max-w-md ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}>
-                    <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                      <div className="text-primary-500 font-bold text-lg mb-2">{item.year}</div>
-                      <h3 className="text-xl font-semibold font-heading text-gray-900 mb-2">{item.title}</h3>
-                      <p className="text-gray-600">{item.description}</p>
+                    <div className="relative bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                      {/* add small animated borders to timeline card */}
+                      <div className="absolute inset-0 rounded-lg border-2 border-primary-500 pointer-events-none animate-border-slide opacity-40"></div>
+                      <div className="absolute inset-2 rounded-lg border-2 border-primary-300 pointer-events-none animate-border-slide-reverse opacity-30"></div>
+
+                      <div className="relative z-10">
+                        <div className="text-primary-500 font-bold text-lg mb-2">{item.year}</div>
+                        <h3 className="text-xl font-semibold font-heading text-gray-900 mb-2">{item.title}</h3>
+                        <p className="text-gray-600">{item.description}</p>
+                      </div>
                     </div>
                   </div>
                   <div className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-primary-500 rounded-full border-4 border-white shadow-lg"></div>
