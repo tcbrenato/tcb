@@ -185,7 +185,7 @@ const Contact = () => {
 
   // Fonction Formspree originale
   const handleFormspreeSubmit = async () => {
-    const response = await fetch('https://formspree.io/f/xdkogkpv', {
+    const response = await fetch('https://formspree.io/f/mandzbrr', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
