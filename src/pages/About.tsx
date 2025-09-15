@@ -94,49 +94,72 @@ const About = () => {
 
   return (
     <div className="pt-20">
-import React from "react";
+      {/* Hero Section */}
+      <section className="py-20 bg-gradient-to-br from-primary-50 to-blue-50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div 
+            ref={heroRef}
+            className={`max-w-6xl mx-auto transition-all duration-1000 ${
+              heroVisible ? 'animate-slide-up' : 'opacity-0'
+            }`}
+          >
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              {/* Photo principale */}
+              <div className="order-2 lg:order-1">
+                <div className="relative">
+                  <div className="absolute inset-0 bg-primary-500 rounded-2xl transform rotate-6"></div>
+                  <img 
+                    src="/ren5.jpg" 
+                    alt="Rénato TCHOBO - Créateur de solutions digitales"
+                    className="relative w-full max-w-md mx-auto rounded-2xl shadow-2xl object-cover h-96 lg:h-[500px]"
+                  />
+                  <div className="absolute -bottom-6 -right-6 bg-white p-4 rounded-xl shadow-lg">
+                    <div className="flex items-center space-x-2">
+                      <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                      <span className="text-sm font-medium text-gray-700">Disponible pour projets</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-const About: React.FC = () => {
-  return (
-    <section className="relative py-20 bg-white">
-      <div className="container mx-auto px-6 lg:px-12">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          
-          {/* Bloc Texte avec contour animé */}
-          <div className="relative p-8 rounded-2xl overflow-hidden">
-            {/* Contours animés */}
-            <div className="absolute inset-0 border-2 border-green-600 rounded-2xl animate-border-slide"></div>
-            <div className="absolute inset-2 border-2 border-green-400 rounded-2xl animate-border-slide-reverse"></div>
-
-            <h2 className="text-4xl font-bold text-gray-900 mb-6 relative z-10">
-              À propos de moi
-            </h2>
-            <p className="text-lg text-gray-600 leading-relaxed relative z-10">
-              Je suis Rénato, passionné par le digital, le design et les solutions
-              innovantes. Mon objectif est de transformer vos idées en projets
-              concrets et impactants.
-            </p>
-          </div>
-
-          {/* Bloc Image avec contour animé */}
-          <div className="relative p-4 rounded-2xl overflow-hidden">
-            {/* Contours animés */}
-            <div className="absolute inset-0 border-2 border-green-600 rounded-2xl animate-border-slide"></div>
-            <div className="absolute inset-2 border-2 border-green-400 rounded-2xl animate-border-slide-reverse"></div>
-
-            <img
-              src="/about-image.jpg"
-              alt="Rénato"
-              className="rounded-2xl w-full object-cover relative z-10"
-            />
+              {/* Contenu textuel */}
+              <div className="order-1 lg:order-2 text-center lg:text-left">
+                <h1 className="text-4xl md:text-5xl font-bold font-heading text-gray-900 mb-6">
+                  Salut, je suis <span className="text-primary-500">Rénato</span>
+                </h1>
+                <p className="text-xl text-gray-600 leading-relaxed mb-8">
+                  Créateur de solutions digitales passionné, je transforme les idées en expériences 
+                  numériques exceptionnelles depuis le cœur de l'Afrique de l'Ouest.
+                </p>
+                <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-8 text-gray-600 mb-8">
+                  <div className="flex items-center space-x-2">
+                    <MapPin className="h-5 w-5 text-primary-500" />
+                    <span>Bénin, Afrique</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <Calendar className="h-5 w-5 text-primary-500" />
+                    <span>5+ années d'expérience</span>
+                  </div>
+                </div>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                  <a
+                    href="/projects"
+                    className="bg-primary-500 text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary-600 transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                  >
+                    Voir mes projets
+                  </a>
+                  <a
+                    href="/contact"
+                    className="border-2 border-primary-500 text-primary-500 px-8 py-4 rounded-lg font-semibold hover:bg-primary-500 hover:text-white transition-all duration-300"
+                  >
+                    Discutons ensemble
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-  );
-};
-
-
+      </section>
 
       {/* Story Section avec photos */}
       <section className="py-20 bg-white">
