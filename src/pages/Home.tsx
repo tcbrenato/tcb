@@ -163,7 +163,7 @@ const Home = () => {
             {/* Carousel */}
             <div className="flex justify-center lg:justify-end">
               <div className="relative w-80 h-96 lg:w-96 lg:h-[500px] rounded-2xl shadow-2xl overflow-hidden">
-                {["https://i.ibb.co/3mGB2NVh/3c4ace58-6c2d-43ad-a572-765507174b05.jpg","/ren4.jpg","code"].map((slide, index) => {
+                {["https://i.ibb.co/YBD7MDH9/TCB-RENATO-2.png","/ren4.jpg","code"].map((slide, index) => {
                   const isActive = index === currentIndexSlide;
                   return (
                     <div key={index} className={`absolute w-full h-full transition-opacity duration-700 ${isActive ? "opacity-100 z-20" : "opacity-0 z-10"}`}>
