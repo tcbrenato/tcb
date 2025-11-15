@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Code, Download } from 'lucide-react';
+import { Menu, X, Code, Download } from 'lucide-react';
 
 // Hook Typewriter
 const useTypewriter = (text, speed = 120, delay = 5000) => {
@@ -25,7 +25,7 @@ const useTypewriter = (text, speed = 120, delay = 5000) => {
 };
 
 const Header = () => {
-  const [appsOpen, setAppsOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
   const typewriterText = useTypewriter('Rénato TCHOBO', 100, 5000);
@@ -45,16 +45,12 @@ const Header = () => {
   ];
 
   const handleDownloadCV = () => {
-    window.open(
-      'https://drive.google.com/file/d/1QCe5LURLEj85PAyQwtwBe4iag1reGtFs/view?usp=sharing',
-      '_blank'
-    );
+    window.open('https://drive.google.com/file/d/1QCe5LURLEj85PAyQwtwBe4iag1reGtFs/view?usp=sharing', '_blank');
   };
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
-      
-      {/* Barre couleur du Bénin */}
+      {/* Barre du drapeau du Bénin */}
       <div className="flex w-full h-1">
         <div className="flex-1 bg-[#009739]"></div>
         <div className="flex-1 bg-[#FCD116]"></div>
@@ -64,9 +60,7 @@ const Header = () => {
       {/* Header principal */}
       <div className="bg-primary-500 shadow-lg">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-
           <div className="flex items-center justify-between py-3">
-            
             {/* Logo + Nom */}
             <Link to="/" className="flex items-center space-x-3 group">
               <div className="p-2 bg-white/10 rounded-lg group-hover:bg-white/20 transition-all duration-300">
@@ -97,10 +91,8 @@ const Header = () => {
               ))}
             </nav>
 
-            {/* CV Desktop + Google Apps Mobile */}
+            {/* CV + Menu Mobile */}
             <div className="flex items-center space-x-3">
-              
-              {/* CV Button */}
               <button
                 onClick={handleDownloadCV}
                 className="hidden sm:flex items-center space-x-2 bg-white text-primary-500 px-4 py-2 rounded-lg font-semibold hover:bg-primary-50 transition-all duration-300 hover:scale-105"
@@ -109,65 +101,48 @@ const Header = () => {
                 <span className="font-medium">CV</span>
               </button>
 
-              {/* Google Apps Launcher (mobile) */}
-              <div className="relative lg:hidden">
-                <button
-                  onClick={() => setAppsOpen(!appsOpen)}
-                  className="p-2 rounded-lg hover:bg-white/10 transition"
-                >
-                  <div className="grid grid-cols-3 gap-1">
-                    {[...Array(9)].map((_, i) => (
-                      <div key={i} className="w-1.5 h-1.5 bg-white rounded-sm"></div>
-                    ))}
-                  </div>
-                </button>
-
-                {/* Menu Google Apps */}
-                {appsOpen && (
-                  <div className="absolute right-0 mt-3 bg-white w-64 rounded-2xl shadow-2xl p-4 animate-scale-in">
-
-                    <div className="grid grid-cols-3 gap-4">
-                      {navItems.map((item, index) => {
-                        const googleColors = [
-                          "#4285F4", "#EA4335", "#FBBC05",
-                          "#34A853", "#A142F4", "#F45D22"
-                        ];
-                        const bg = googleColors[index % googleColors.length];
-
-                        return (
-                          <Link
-                            key={item.path}
-                            to={item.path}
-                            onClick={() => setAppsOpen(false)}
-                            className="flex flex-col items-center"
-                          >
-                            <div
-                              className="w-12 h-12 rounded-full flex items-center justify-center text-white text-lg font-semibold shadow-md"
-                              style={{ backgroundColor: bg }}
-                            >
-                              {item.name[0]}
-                            </div>
-                            <span className="text-xs mt-2 font-medium text-gray-700 text-center">
-                              {item.name}
-                            </span>
-                          </Link>
-                        );
-                      })}
-                    </div>
-
-                    <div className="border-t pt-3 mt-3 text-center">
-                      <button className="text-sm text-blue-600 font-medium hover:underline">
-                        Voir plus
-                      </button>
-                    </div>
-
-                  </div>
-                )}
-              </div>
-
+              <button
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                className="lg:hidden p-2 rounded-lg text-white hover:bg-white/10 transition-colors duration-300"
+              >
+                {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              </button>
             </div>
           </div>
 
+          {/* Menu Mobile */}
+          {isMenuOpen && (
+            <div className="lg:hidden pb-4 animate-slide-down">
+              <div className="bg-white/95 backdrop-blur-sm rounded-lg shadow-lg py-2">
+                {navItems.map((item) => (
+                  <Link
+                    key={item.path}
+                    to={item.path}
+                    onClick={() => setIsMenuOpen(false)}
+                    className={`block px-4 py-3 font-medium transition-colors duration-300 ${
+                      location.pathname === item.path
+                        ? 'text-primary-500 bg-primary-50'
+                        : 'text-gray-700 hover:bg-gray-50'
+                    }`}
+                  >
+                    {item.name}
+                  </Link>
+                ))}
+                <div className="px-4 py-2 border-t border-gray-200 mt-2">
+                  <button
+                    onClick={() => {
+                      handleDownloadCV();
+                      setIsMenuOpen(false);
+                    }}
+                    className="w-full flex items-center justify-center space-x-2 bg-primary-500 text-white px-4 py-3 rounded-lg font-semibold hover:bg-primary-600 transition-all duration-300"
+                  >
+                    <Download className="h-4 w-4" />
+                    <span className="font-medium">Télécharger CV</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </header>
