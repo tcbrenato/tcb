@@ -16,7 +16,7 @@ const Chatbot = () => {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: '1',
-      text: "Salut ! Je suis l'assistant IA de Rénato, propulsé par Groq et Llama3. Comment puis-je vous aider aujourd'hui ?",
+      text: "Bonjour ! Je suis l'assistant IA de Rénato TCHOBO, créateur de solutions digitales au Bénin. Je peux répondre à toutes vos questions sur ses services (développement web, applications mobiles, UI/UX design, SEO, e-commerce), ses tarifs, son expérience et comment le contacter. Que souhaitez-vous savoir ?",
       isBot: true,
       timestamp: new Date()
     }
@@ -112,10 +112,12 @@ const Chatbot = () => {
   };
 
   const quickQuestions = [
-    'Quels sont les services de Rénato ?',
-    'Comment contacter Rénato ?',
-    'Quels sont ses tarifs ?',
-    'Où est-il basé ?'
+    'Quels sont les services proposés par Rénato ?',
+    'Quel est le prix d\'un site web ?',
+    'Comment puis-je contacter Rénato ?',
+    'Quelles technologies utilise-t-il ?',
+    'Combien de temps prend un projet ?',
+    'Propose-t-il du SEO ?'
   ];
 
   return (
