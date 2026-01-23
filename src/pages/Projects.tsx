@@ -112,6 +112,66 @@ const Projects = () => {
       liveUrl: '#',
       githubUrl: '#',
       status: 'Terminé'
+    },
+    {
+      id: 9,
+      title: 'Marketing & Communication Digitale – La Roche Bénin',
+      description: 'Gestion de la stratégie de marketing digital visant à renforcer la visibilité de l\'entreprise, promouvoir les offres et développer l\'engagement en ligne.',
+      image: 'https://images.pexels.com/photos/3945683/pexels-photo-3945683.jpeg?auto=compress&cs=tinysrgb&w=600',
+      category: 'marketing',
+      technologies: ['Stratégie digitale', 'Réseaux sociaux', 'Campagnes promotionnelles', 'Branding'],
+      features: ['Création de contenus promotionnels', 'Gestion de la visibilité digitale', 'Campagnes marketing & offres commerciales', 'Communication institutionnelle'],
+      liveUrl: '#',
+      githubUrl: '#',
+      status: 'En cours'
+    },
+    {
+      id: 10,
+      title: 'Refonte UI/UX & Image Digitale – CRF PERFECTION',
+      description: 'Refonte graphique et amélioration de l\'interface utilisateur du site web afin d\'optimiser l\'expérience utilisateur et valoriser l\'image de marque.',
+      image: 'https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=600',
+      category: 'marketing',
+      technologies: ['UI/UX Design', 'Figma', 'Identité visuelle', 'Web design'],
+      features: ['Refonte visuelle du site web', 'Amélioration de l\'ergonomie', 'Cohérence graphique', 'Valorisation de l\'image digitale'],
+      liveUrl: '#',
+      githubUrl: '#',
+      status: 'Terminé'
+    },
+    {
+      id: 11,
+      title: 'Campagne Visuelle – White Party (Paouignan)',
+      description: 'Création de supports graphiques pour la promotion d\'un événement festif et l\'augmentation de la participation.',
+      image: 'https://images.pexels.com/photos/5632399/pexels-photo-5632399.jpeg?auto=compress&cs=tinysrgb&w=600',
+      category: 'marketing',
+      technologies: ['Design graphique', 'Canva', 'Communication événementielle'],
+      features: ['Affiches promotionnelles', 'Visuels pour réseaux sociaux', 'Communication événementielle'],
+      liveUrl: '#',
+      githubUrl: '#',
+      status: 'Terminé'
+    },
+    {
+      id: 12,
+      title: 'Communication Visuelle – Restaurant Chez Hoonon (Savalou)',
+      description: 'Création d\'affiches et visuels promotionnels pour valoriser les menus et renforcer la visibilité locale du restaurant.',
+      image: 'https://images.pexels.com/photos/3150150/pexels-photo-3150150.jpeg?auto=compress&cs=tinysrgb&w=600',
+      category: 'marketing',
+      technologies: ['Design graphique', 'Branding', 'Communication locale'],
+      features: ['Affiches de menus', 'Visuels promotionnels', 'Valorisation de l\'offre culinaire'],
+      liveUrl: '#',
+      githubUrl: '#',
+      status: 'Terminé'
+    },
+    {
+      id: 13,
+      title: 'Créations Graphiques – Entrepreneurs & Artisans',
+      description: 'Réalisation d\'affiches publicitaires pour des couturières, stylistes, services de rédaction professionnelle et pâtissières.',
+      image: 'https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=600',
+      category: 'marketing',
+      technologies: ['Canva', 'Design graphique', 'Marketing visuel'],
+      features: ['Affiches publicitaires', 'Communication visuelle', 'Promotion de services'],
+      liveUrl: '#',
+      githubUrl: '#',
+      status: 'Terminé'
     }
   ];
 
