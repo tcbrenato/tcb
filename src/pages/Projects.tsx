@@ -153,7 +153,7 @@ const Projects = () => {
       id: 12,
       title: 'Communication Visuelle – Restaurant Chez Hoonon (Savalou)',
       description: 'Création d\'affiches et visuels promotionnels pour valoriser les menus et renforcer la visibilité locale du restaurant.',
-      image: 'https://images.pexels.com/photos/3150150/pexels-photo-3150150.jpeg?auto=compress&cs=tinysrgb&w=600',
+      image: 'https://i.ibb.co/DPDQfx3g/208ab9caff3f638918f22588b8bcbc9a.jpg',
       category: 'marketing',
       technologies: ['Design graphique', 'Branding', 'Communication locale'],
       features: ['Affiches de menus', 'Visuels promotionnels', 'Valorisation de l\'offre culinaire'],
