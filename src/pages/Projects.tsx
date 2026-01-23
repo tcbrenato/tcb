@@ -151,7 +151,7 @@ const Projects = () => {
     },
     {
       id: 12,
-      title: 'Communication Visuelle – Restaurant Chez Hoonon (Savalou)',
+      title: 'Communication Visuelle – Restaurant Hakuna Matata (EKPE)',
       description: 'Création d\'affiches et visuels promotionnels pour valoriser les menus et renforcer la visibilité locale du restaurant.',
       image: 'https://i.ibb.co/DPDQfx3g/208ab9caff3f638918f22588b8bcbc9a.jpg',
       category: 'marketing',
@@ -165,7 +165,7 @@ const Projects = () => {
       id: 13,
       title: 'Créations Graphiques – Entrepreneurs & Artisans',
       description: 'Réalisation d\'affiches publicitaires pour des couturières, stylistes, services de rédaction professionnelle et pâtissières.',
-      image: 'https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=600',
+      image: 'https://i.ibb.co/1fQfh1FX/87926c4a-842a-438c-b88a-e91c851e44d4.jpg',
       category: 'marketing',
       technologies: ['Canva', 'Design graphique', 'Marketing visuel'],
       features: ['Affiches publicitaires', 'Communication visuelle', 'Promotion de services'],
