@@ -141,7 +141,7 @@ const Projects = () => {
       id: 11,
       title: 'Campagne Visuelle – White Party (Paouignan)',
       description: 'Création de supports graphiques pour la promotion d\'un événement festif et l\'augmentation de la participation.',
-      image: 'https://images.pexels.com/photos/5632399/pexels-photo-5632399.jpeg?auto=compress&cs=tinysrgb&w=600',
+      image: 'https://i.ibb.co/wh5M0t6W/1a1d1117-7192-40a4-b3d8-12424dc48ce6.jpg',
       category: 'marketing',
       technologies: ['Design graphique', 'Canva', 'Communication événementielle'],
       features: ['Affiches promotionnelles', 'Visuels pour réseaux sociaux', 'Communication événementielle'],
