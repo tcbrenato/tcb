@@ -105,7 +105,7 @@ const Projects = () => {
       id: 8,
       title: 'Campagne SEO Restaurant',
       description: 'Stratégie SEO complète pour chaîne de restaurants avec amélioration de 300% du trafic organique.',
-      image: 'https://i.ibb.co/DP80hbM7/73249505ebd172eb1d2b4130e8fecc1c.jpg',
+      image: 'https://i.ibb.co/DDSSgMmq/ae3f0bb2b5101b9423b4762527deae54.jpgg',
       category: 'marketing',
       technologies: ['SEO Tools', 'Google Analytics', 'Content Strategy', 'Local SEO'],
       features: ['Audit SEO', 'Content strategy', 'Local SEO', 'Link building'],
