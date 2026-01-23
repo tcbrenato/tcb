@@ -117,7 +117,7 @@ const Projects = () => {
       id: 9,
       title: 'Marketing & Communication Digitale – La Roche Bénin',
       description: 'Gestion de la stratégie de marketing digital visant à renforcer la visibilité de l\'entreprise, promouvoir les offres et développer l\'engagement en ligne.',
-      image: 'https://images.pexels.com/photos/3945683/pexels-photo-3945683.jpeg?auto=compress&cs=tinysrgb&w=600',
+      image: 'https://i.ibb.co/VWZsSStH/images.png',
       category: 'marketing',
       technologies: ['Stratégie digitale', 'Réseaux sociaux', 'Campagnes promotionnelles', 'Branding'],
       features: ['Création de contenus promotionnels', 'Gestion de la visibilité digitale', 'Campagnes marketing & offres commerciales', 'Communication institutionnelle'],
