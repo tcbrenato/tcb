@@ -129,7 +129,7 @@ const Projects = () => {
       id: 10,
       title: 'Refonte UI/UX & Image Digitale – CRF PERFECTION',
       description: 'Refonte graphique et amélioration de l\'interface utilisateur du site web afin d\'optimiser l\'expérience utilisateur et valoriser l\'image de marque.',
-      image: 'https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=600',
+      image: 'https://i.ibb.co/0j9NPpzK/image.png',
       category: 'marketing',
       technologies: ['UI/UX Design', 'Figma', 'Identité visuelle', 'Web design'],
       features: ['Refonte visuelle du site web', 'Amélioration de l\'ergonomie', 'Cohérence graphique', 'Valorisation de l\'image digitale'],
